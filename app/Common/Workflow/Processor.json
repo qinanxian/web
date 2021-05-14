@@ -1,0 +1,4 @@
+[
+  {"key": "PersonalLoan", "processor": "BizApplication/ApplicationWorkflow/ApplicationProcessor"}
+
+]

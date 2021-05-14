@@ -1,0 +1,133 @@
+
+@import "../../../style/index";
+
+.@{prefix}-readonly-input{
+  background-color: #F7F7F7;
+  input {
+    background-color: transparent;
+  }
+}
+
+.cust-edit{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  width: calc(~"100% - 95px");
+  margin: 0 5px;
+  min-width: 200px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  cursor: text;
+  &-cta{
+    width: calc(~"100% - 8px");
+    height: 100%;
+    overflow: hidden;
+    padding-right: 4px;
+    padding-left: 4px;
+    &-select{
+      position: absolute;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      height: 100%;
+      width: calc(~"100% - 8px");
+      padding-top: 2px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      color: rgba(0, 0, 0, 0.65);
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      span{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 95%;
+        margin-right: 4px;
+        padding: 0 4px;
+        color: rgba(0,0,0,0.65);
+        background-color: #fafafa;
+        border: 1px solid #e8e8e8;
+        border-radius: 2px;
+        white-space: nowrap;
+        cursor: default;
+        user-select: none;
+        i{
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+  &-options{
+    position: absolute;
+    top: 29px;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 7px 0 #DDE3FA;
+    background: #ffffff;
+    z-index: 999;
+    &-item{
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 8px;
+      cursor: pointer;
+      span{
+        display: inline-block;
+        height: 27px;
+        padding: 0 10px;
+        line-height: 27px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        user-select: none;
+        pointer-events: none;
+      }
+      &:hover{
+        background: #e6f7ff;
+      }
+    }
+  }
+  &-optionsup{
+    animation: toUp 400ms forwards;
+  }
+  &-optionsdown{
+    animation: toDown 400ms forwards;
+  }
+  i{
+    margin-left: 2px;
+    font-size: 13px;
+    color: rgba(0,0,0,.5);
+    pointer-events: none;
+  }
+}
+
+@keyframes toUp {
+  from {
+    opacity: 1;
+    color: rgba(0,0,0,0.65);
+  }
+  to {
+    opacity: 0;
+    color: rgba(0,0,0,0);
+  }
+}
+
+@keyframes toDown {
+  from {
+    opacity: 0;
+    color: rgba(0,0,0,0);
+  }
+  to {
+    opacity: 1;
+    color: rgba(0,0,0,0.65);
+  }
+}
+
+.anticon-down {
+  font-size: 12px;
+}

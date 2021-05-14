@@ -1,0 +1,165 @@
+.navtree-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width: 250px;
+  margin-top: 2px;
+  &-mock{
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 666;
+  }
+  &-mockdark{
+    border-right: 1px solid #001529;
+    background: #303133;
+    transition: background .3s ease-in-out .03s;
+  }
+  &-mocklight{
+    border-right: 1px solid #ddd;
+    background: #FFFFFF;
+    transition: background .3s ease-in-out .03s;
+  }
+  &-body{
+    overflow: auto;
+    height: calc(~"100vh - 50px");
+    position: absolute;
+    width: 100%;
+    z-index: 777;
+    ul {
+      background: rgba(0,0,0,0) !important;
+    }
+  }
+  &-bodyA{
+    position: fixed;
+    width:250px;
+    & > ul{
+      height: calc(~"100vh - 50px");
+      padding-bottom: 12px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  &-bodyHA, &-bodyunfoldHA{
+    & > ul{
+      height: calc(~"100vh - 50px");
+      padding-bottom: 12px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  &-bodyfoldA{
+    position: fixed;
+    width:66px;
+  }
+  &-bodyunfoldA{
+    position: fixed;
+    width:250px;
+  }
+}
+.navtree-containerfold{
+  animation: toFold 400ms forwards;
+  &-mockfold{
+    animation: toFold 400ms forwards;
+  }
+  &-bodyfold{
+    animation: toFold 400ms forwards;
+  }
+}
+.navtree-containerunfold{
+  animation: toUnFold 400ms forwards;
+  &-mockunfold{
+    animation: toUnFold 400ms forwards;
+  }
+  &-bodyunfold{
+    animation: toUnFold 400ms forwards;
+  }
+}
+.custom-menu-itemtrue{
+  animation: toMenuFold 400ms forwards;
+}
+.custom-menu-itemfalse{
+  animation: toMenuUnFold 400ms forwards;
+}
+.custom-menu-ctatrue{
+  margin-left: -8px;
+}
+@keyframes toDark {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes toLight {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes toMenuFold {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    display: none;
+  }
+  80% {
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes toMenuUnFold {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+    display: inline-block;
+  }
+  100% {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+@keyframes toFold {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 66px;
+  }
+}
+@keyframes toUnFold {
+  from {
+    width: 66px;
+  }
+  to {
+    width: 250px;
+  }
+}
+.ant-menu-submenu-title{
+  i{
+    margin-right: 10px !important;
+  }
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub{
+    background: #303133;
+}
+
+.ant-menu-item {
+  width: auto !important;
+}
+
+.ant-menu-inline-collapsed {
+  width: 66px !important;
+}

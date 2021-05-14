@@ -1,0 +1,307 @@
+.header-container{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  top: 0;
+  z-index: 789;
+  &-left{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    //padding-left: 9px;
+    z-index: 999;
+
+    i{
+      margin-top:10px;
+      color: #ffffff;
+      font-size: 30px;
+    }
+    span{
+      display: inline-block;
+      font-size: 16px;
+      line-height: 16px;
+      //animation: toUnFoldSpan 400ms forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #FFFFFF;
+    }
+  }
+  &-leftunfold{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    //padding-left: 9px;
+    animation: toUnFold 400ms forwards;
+    z-index: 999;
+    i{
+      margin-top:10px;
+      color: #ffffff;
+      font-size: 30px;
+      //animation: toUnFoldIcon 400ms forwards;
+    }
+    span{
+      display: inline-block;
+      //margin-bottom: -12px;
+      font-size: 16px;
+      line-height: 16px;
+      animation: toUnFoldSpan 400ms forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #FFFFFF;
+    }
+  }
+  &-leftfold{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    //padding-left: 9px;
+    animation: toFold 400ms forwards;
+    z-index: 999;
+    i{
+      margin-top:10px;
+      color: #ffffff;
+      font-size: 30px;
+      //animation: toUnFoldIcon 400ms forwards;
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    width: calc(~"100% - 250px");
+    height: 50px;
+    margin-left: 250px;
+    &-icon {
+      display: flex;
+      align-items: center;
+      margin-left: 18px;
+      i {
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+    &-setup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 150px;
+      margin-right: 15px;
+      i {
+        color: #FFFFFF;
+      }
+      &-personal {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        &-header {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          background: url("./header.png") no-repeat;
+          background-size: 100%;
+        }
+        &-text {
+          margin: auto 10px;
+          color: #FFFFFF;
+        }
+        &-down {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          line-height: 12px;
+          i {
+            font-size: 12px;
+          }
+        }
+        &-bgruntrue{
+          display: none;
+        }
+        &-bgrunfalse{
+          position: absolute;
+          width: 100%;
+          height: 30px;
+          top: 30px;
+          right: 0;
+          background: rgba(0,0,0,0);
+          z-index: 899;
+        }
+        &-downruntrue {
+          animation: turnDown 400ms forwards;
+        }
+        &-downrunfalse {
+          animation: turnUp 400ms forwards;
+        }
+        &-box{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          min-width: 80px;
+          top: 42px;
+          right: 0;
+          transform-origin: top;
+          border-radius: 3px;
+          border: 1px solid #ddd;
+          background: #fff;
+          z-index: 999;
+          span{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+            &:hover{
+              background: rgba(0,0,0,0.2);
+            }
+          }
+        }
+        &-boxtrue{
+          display: none;
+        }
+        &-boxruntrue{
+          animation: boxDown 400ms forwards;
+        }
+        &-boxrunfalse{
+          animation: boxUp 400ms forwards;
+        }
+      }
+    }
+  }
+  &-rightfold{
+    animation: toFoldR 400ms forwards;
+  }
+  &-rightunfold{
+    animation: toUnFoldR 400ms forwards;
+  }
+  &-leftN{
+    position: absolute;
+  }
+  &-rightN{
+    position: relative;
+  }
+  &-leftA{
+    position: fixed;
+  }
+  &-rightA{
+    position: relative;
+  }
+  &-leftH{
+    position: fixed;
+    z-index: 999;
+  }
+  &-rightH{
+    position: fixed;
+    z-index: 999;
+  }
+  &-leftHA{
+    position: fixed;
+  }
+  &-rightHA{
+    position: relative;
+  }
+}
+@keyframes boxDown{
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+    display: none !important;
+  }
+}
+@keyframes boxUp{
+  from {
+    display: inline-block !important;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes turnDown{
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes turnUp{
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes toFoldR{
+  from {
+    width: calc(~"100% - 250px");
+    margin-left: 250px;
+  }
+  to {
+    width:calc(~"100% - 66px");
+    margin-left: 66px;
+  }
+}
+@keyframes toUnFoldR{
+  from {
+    width:calc(~"100% - 66px");
+    margin-left: 66px;
+  }
+  to {
+    width: calc(~"100% - 250px");
+    margin-left: 250px;
+  }
+}
+@keyframes toFold{
+  from {
+    width:250px;
+  }
+  to {
+    width:66px;
+  }
+}
+@keyframes toUnFold{
+  to {
+    width:250px;
+  }
+}
+@keyframes toUnFoldIcon {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+@keyframes toFoldIcon {
+  from {
+    font-size: 30px;
+  }
+  to {
+    font-size: 18px;
+  }
+}
+@keyframes toFoldSpan {
+  to {
+    width: 0;
+    font-size: 10px;
+  }
+}
+@keyframes toUnFoldSpan {
+  from {
+    width: 0;
+    font-size: 10px;
+  }
+  to {
+    width: 120px;
+    font-size: 16px;
+  }
+}

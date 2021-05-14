@@ -1,0 +1,98 @@
+.crops-pic-card-list {
+  &-image-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  &-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-item {
+      border: 1px #DFE0E2 solid;
+      border-radius: 3px;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      box-sizing: border-box;
+      img {
+        border-radius: 3px;
+      }
+      &-container {
+        margin: 20px;
+      }
+      &-title {
+        text-align: center;
+      }
+      &-box {
+        width: 100%;
+        max-height: 600px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        &-img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          margin: 15px;
+        }
+        &-modal {
+          opacity: 0;
+          transition: opacity 0.3s;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &-context {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-modal {
+        opacity: 0;
+        transition: opacity 0.3s;
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #FFFFFF;
+        &-container {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          span {
+            padding: 5px;
+          }
+          i + i {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

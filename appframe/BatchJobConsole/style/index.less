@@ -1,0 +1,116 @@
+.batch-container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  &-left{
+    width: 49%;
+    &-header{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    &-box{
+      &-ul{
+        &-li{
+          display: flex;
+          box-shadow: 0 3px 4px #ccc;
+          margin-bottom: 12px;
+          border: 1px solid #d4d0d0;
+          &-left{
+            width: 85%;
+            padding: 10px;
+            &-top{
+              height: 30px;
+              padding-left: 15px;
+              line-height: 30px;
+              margin-bottom: 10px;
+              &-text{
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 20px;
+                font-weight: 600;
+              }
+              &-key{
+                display: inline-block;
+                color: #9fa1a3;
+              }
+            }
+            &-bottom{
+              display: flex;
+              padding-left: 20px;
+              &-main{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &-timer{
+                  display: flex;
+                  height: 20px;
+                  &-header{
+                    display: flex;
+                    align-items: center;
+                    &-status{
+                      width: 100px;
+                      font-size: 18px;
+                      margin-right: 18px;
+                    }
+                    &-text{
+                      margin-right: 10px;
+                      padding-left: 8px;
+                      padding-right: 9px;
+                      color: #ffffff;
+                      background: #989898;
+                    }
+                  }
+                }
+                &-list{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 10px 20px 0 0;
+                  &-block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &-top{
+                      font-size: 18px;
+                    }
+                    &-bottom{
+                      color: #949494;
+                    }
+                  }
+                  &-line{
+                    display: block;
+                    width: 1px;
+                    height: 26px;
+                    margin-left: 3px;
+                    background: #d4d0d0;
+                  }
+                }
+              }
+            }
+          }
+          &-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 15%;
+            padding: 10px;
+            border-left: 1px solid #d4d0d0;
+          }
+        }
+        &-liselected{
+          background: #efefef;
+        }
+      }
+    }
+    &-tail{}
+  }
+  &-right{
+    width: 49%;
+    border: 1px solid #d4d0d0;
+  }
+}

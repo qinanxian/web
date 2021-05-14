@@ -1,0 +1,229 @@
+@import "../../../../src/style/index";
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  background: url("./bg(1200px).jpg") no-repeat center 0;
+  background-size: 100% 100%;
+  &-menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 115px;
+    top: calc(~"50% - 48px");
+    right: 30px;
+    span{
+      display: inline-block;
+      text-align: center;
+      color: #ffffff;
+      height: 30px;
+      line-height: 30px;
+      width: 100%;
+      background: #aaa;
+      opacity: 0.5;
+      border-radius: 100%;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+#resultlog{
+  margin-left: 44px;
+  color: red;
+  height: 16px;
+  margin-top: -20px;
+  margin-bottom: -16px;
+}
+.container .container-box{
+  position: absolute;
+  width: 730px;
+  height: 444px;
+  top: calc(~"50% - 222px");
+  left: calc(~"50% - 365px");
+  box-shadow: 0 0 10px #707070;
+  z-index: 12;
+}
+.container .container-box .box-left{
+  width: 60%;
+  height: 100%;
+  float: left;
+  background: rgba(255, 255, 255, 0.15);
+  /*opacity: 0.15;*/
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+}
+.container .container-box .box-left div:nth-child(1){
+  margin-left: 4%;
+  margin-top: 4%;
+}
+.container .container-box .box-left div:nth-child(2){
+  margin-left: 4%;
+  margin-top: 1%;
+}
+.container .container-box .box-right{
+  width: 40%;
+  height: 100%;
+  float: left;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .container .container-box{
+    position: absolute;
+    width: 292px;
+    height: 444px;
+    top: calc(~"50% - 222px");
+    left: calc(~"50% - 146px");
+    box-shadow: 0 0 10px #707070;
+    z-index: 12;
+  }
+  .container .container-box .box-left{
+    display: none;
+  }
+  .container .container-box .box-right{
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: #fff;
+  }
+}
+.container .container-box .box-right .right-icon{
+  width: 100%;
+  height: 45%;
+  display: flex;
+  background-size: 60% 30%;
+  justify-content: center;
+  align-items: center;
+  i{
+    font-size: 50px;
+    color: #1E90FF;
+  }
+}
+.container .container-box .box-right .right-bottom{
+  /*background: cornsilk;*/
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .container-box .box-right .right-bottom input{
+  width: 70%;
+  height: 36px;
+  padding-left: 35px;
+  font-size: 1.2em;
+  border: 1px #ccc solid;
+}
+.container .container-box .box-right .right-bottom .accountbox{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.container .container-box .box-right .right-bottom .accountbox .accountIcon{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 50px;
+  background: url("./account.png") no-repeat;
+}
+.container .container-box .box-right .right-bottom .passwordbox{
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.container .container-box .box-right .right-bottom .passwordbox .passwordIcon{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 50px;
+  background: url("./password.png") no-repeat;
+}
+.container .container-box .box-right .right-bottom .switchbox{
+  width: 69%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 46px;
+  user-select: none;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup{
+  /*width: 69%;*/
+  display: flex;
+  align-items: center;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn{
+  display: none;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .state{
+  box-shadow: #ccc 0 0 0 1px;
+  width: 36px;
+  height: 17px;
+  display: inline-block;
+  border-radius: 20px;
+  position: relative;
+  background-color: #bdbdbd;
+  overflow: hidden;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .state:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 20;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn:checked + label.state:before {
+  left: 20px;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn:checked + label.state {
+  background-color: #51ccee;
+  transition-delay: 0.3s;
+}
+.container .container-box .box-right .right-bottom .switchbox .switchgroup span{
+  font-size: 1em;
+  vertical-align: text-top;
+}
+#submit{
+  width: 50px;
+  height: 50px;
+  border-radius: 100% !important;
+  align-self: center;
+}
+.loginBtn-active{
+  position: relative;
+  width: 17%;
+  height: 22%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1E90FF;
+  cursor: pointer;
+  border-radius: 100%;
+  background-size: 46% 47%;
+  animation: arrow 1s;
+  color: #fff;
+  size: 18px;
+  &:hover {
+    background: #1E90FF;
+    color: #fff;
+  }
+}
+.forgetPassword{
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  &:hover{
+    color: #FF0000;
+  }
+}

@@ -1,0 +1,152 @@
+/*
+ * Released under BSD License
+ * Copyright (c) 2014-2015 hizzgdev@163.com
+ *
+ * Project Home:
+ *   https://github.com/hizzgdev/jsmind/
+ */
+
+/* important section */
+.jsmind-inner{position:relative;overflow:auto;width:100%;height:100%;}/*box-shadow:0 0 2px #000;*/
+.jsmind-inner{
+    moz-user-select:-moz-none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.jsmind-editor {
+    /*border: 0 solid transparent;*/
+    border:0.5px solid #378888;
+    outline:medium;
+}
+
+/* z-index:1 */
+canvas{position:absolute;z-index:1;}
+
+/* z-index:2 */
+jmnodes{position:absolute;z-index:2;background-color:rgba(0,0,0,0);}/*background color is necessary*/
+jmnode{position:absolute;cursor:default;min-width:100px;max-width:400px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+jmexpander{
+    position:absolute;
+    width:10px;
+    height:11px;
+    display:block;
+    overflow:hidden;
+    line-height:7px;
+    font-size:12px;
+    text-align:center;
+    border-radius:6px;
+    border-width:1px;
+    border-style:solid;
+    cursor:pointer;
+    margin-left: 2px;
+}
+
+/* default theme */
+jmnode{padding:5px;background-color:#fff;color:#ccc;border-radius:3px;font:14px/1.125 Verdana,Arial,Helvetica,sans-serif;}
+jmnode:hover{
+    background-color:#ebebeb;
+    color:#333;
+}
+jmnode.selected{
+    background-color:#11f;
+    color:#fff;
+}
+jmnode.selected > input {
+    color: #000000;
+}
+jmnode.root{
+    font-size:20px;
+    background-color: #73a1bf;
+}
+jmexpander{border-color:gray;}
+jmexpander:hover{
+    border-color:#000;
+}
+
+@media screen and (max-device-width: 1024px) {
+    jmnode{padding:5px;border-radius:3px;font-size:14px;}
+    jmnode.root{font-size:21px;}
+}
+
+/*自定义样式*/
+/* primary theme */
+jmnodes.theme-roprimary jmnode{
+    background-color: #73a1bf;
+    color:#000;
+    border-color:#357ebd;
+}
+jmnodes.theme-roprimary jmnode:hover{
+    background-color: #73a1bf;
+    cursor: pointer;
+    border-color:#285e8e;
+}
+jmnodes.theme-roprimary jmnode.selected{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+jmnodes.theme-roprimary jmnode.root{
+    background-color: #729fbb;
+    color: #fff;
+}
+jmnodes.theme-roprimary jmexpander{}
+jmnodes.theme-roprimary jmexpander:hover{
+    border: 1px solid black;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-menu {
+    background-color: #eef3f6;
+    border: 1px solid #357ebd;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-menu.selected {
+    border: 3px solid black;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-menu-disabled {
+    background-color: #e5e5e5;
+    border: 1px solid #939da7;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-menu-disabled.selected {
+    border: 3px solid black;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-action {
+    background-color: transparent;
+    border-bottom-color: #939da7;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #15bf35;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-action.selected {
+    border-bottom-color: #000;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-datascope {
+    background-color: transparent;
+    border-bottom-color: #939da7;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #3f71c2;
+}
+
+jmnodes.theme-roprimary jmnode.jmnode-datascope.selected {
+    border-bottom-color: #000;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

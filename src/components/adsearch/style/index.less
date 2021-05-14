@@ -1,0 +1,46 @@
+@import "../../../style/index";
+
+.@{prefix}-ad-container{
+  display: flex;
+  width: 100%;
+  margin-top: 6px;
+  flex-direction: column;
+  padding: 5px 20px;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  &-search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 60px;
+    &-com {
+      display: flex;
+      flex-direction: row;
+      min-width: 395px;
+      height: 42px;
+    }
+    &-label {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      min-width: 100px;
+    }
+    &-template {
+      display: flex;
+      flex-direction: column;
+      min-width: 395px;
+    }
+  }
+  &-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 55px;
+    border-top: 1px dashed #EEE;
+    width: 100%;
+    > button {
+      margin-right: 10px;
+    }
+  }
+}

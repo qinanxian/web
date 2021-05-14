@@ -1,0 +1,55 @@
+.ro-image-viewer-container {
+  display: flex;
+  justify-content: center;
+  &-galley {
+    //margin-right: 5px;
+    background-color: #3F3F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  &-pictures {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 30rem;
+    width: 60px;
+    & > li {
+      float: left;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #FFFFFF;
+      overflow: hidden;
+      opacity: 0.5;
+      &:hover{
+        transition: all 0.5s;
+        opacity: 1;
+      }
+      padding: 2px;
+      & > img {
+        width: 100%;
+        cursor: -webkit-zoom-in;
+        cursor: zoom-in;
+      }
+    }
+  }
+  &-header-title {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 3px;
+    text-align: center;
+    font-size: 15px;
+    &-container {
+      position: relative;
+    }
+  }
+  &-img-active {
+    opacity: 1 !important;
+  }
+}
+
+.viewer-container {
+  z-index: 1 !important;
+}

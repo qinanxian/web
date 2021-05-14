@@ -1,0 +1,40 @@
+@import "../../../style/index";
+
+.@{prefix} {
+  &-scroller-x-wrapper {
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    user-select: none;
+    margin: 2px 0 2px 0;
+  }
+  &-scroller-x-bar {
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    background-color: #363d4d;
+    user-select: none;
+    transition: all .0s ease;
+    cursor: pointer;
+    opacity: .6;
+  }
+
+  &-scroller-y-wrapper {
+    width: 5px;
+    position: absolute;
+    top: 104px;
+    right: 0;
+    user-select: none;
+  }
+  &-scroller-y-bar {
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    background-color: #363d4d;
+    user-select: none;
+    transition: all .0s ease;
+    cursor: pointer;
+    opacity: .6;
+    display: none;
+  }
+}

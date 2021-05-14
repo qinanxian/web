@@ -1,0 +1,214 @@
+{
+  "meta":{
+    "name":"jsMind-demo-tree",
+    "author":"hizzgdev@163.com",
+    "version":"0.2"
+  },
+  "format":"node_tree",
+  "data":{
+    "topic":"金融风险平台",
+    "id": "root",
+    "path": "root",
+    "contextId": "root",
+    "permitCode": "root",
+    "expanded":false,
+    "type": "start",
+    "fullName": "金融风险综合管理平台",
+    "icon": "",
+    "properties" :{
+      "permitCopyTpl": []
+    },
+    "children":[
+    {
+      "topic":"客户管理",
+      "direction":"right",
+      "expanded":false,
+      "type": "menu",
+      "id": "root:customer",
+      "path": "root:customer",
+      "permitCode": "root:customer",
+      "contextId": "customer",
+      "fullName": "客户管理模块",
+      "enabled": "Y",
+      "icon": "roic-asset",
+      "url": "",
+      "param": "",
+      "children": [
+        {
+          "topic":"法人客户",
+          "direction":"right",
+          "expanded":false,
+          "type": "menu",
+          "id": "root:customer:ent",
+          "path": "root:customer:ent",
+          "permitCode": "",
+          "contextId": "ent",
+          "fullName": "法人客户",
+          "enabled": "N",
+          "icon": "user",
+          "url": "/Customer/Enterprise",
+          "param": "",
+          "label": "法人客户",
+          "children": [
+            {
+              "topic":"所有数据",
+              "direction":"right",
+              "expanded":false,
+              "type": "datascope",
+              "id": "root:customer:ent:$datascope-all",
+              "path": "root:customer:ent:$datascope-all",
+              "permitCode": "",
+              "contextId": "$datascope-all"
+            },
+            {
+              "topic":"本机构数据",
+              "direction":"right",
+              "expanded":false,
+              "type": "datascope",
+              "id": "root:customer:ent:$datascope-orgself",
+              "path": "root:customer:ent:$datascope-orgself",
+              "permitCode": "root:customer:ent:$datascope-orgself",
+              "contextId": "$datascope-orgself"
+            },
+            {
+              "topic":"本机构及下属机构",
+              "direction":"right",
+              "expanded":false,
+              "type": "datascope",
+              "id": "root:customer:ent:$datascope-subordinate",
+              "path": "root:customer:ent:$datascope-subordinate",
+              "permitCode": "root:customer:ent:$datascope-subordinate",
+              "contextId": "$datascope-subordinate"
+            },
+            {
+              "topic":"本人数据",
+              "direction":"right",
+              "expanded":false,
+              "type": "datascope",
+              "id": "root:customer:ent:$datascope-self",
+              "path": "root:customer:ent:$datascope-self",
+              "permitCode": "root:customer:ent:$datascope-self",
+              "contextId": "$datascope-self"
+            },
+            {
+              "topic":"写",
+              "direction":"right",
+              "expanded":false,
+              "type": "action",
+              "id": "root:customer:ent:$action-write",
+              "path": "root:customer:ent:$action-write",
+              "permitCode": "root:customer:ent:$action-write",
+              "contextId": "$action-write"
+            },
+            {
+              "topic":"读",
+              "direction":"right",
+              "expanded":false,
+              "type": "action",
+              "id": "root:customer:ent:$action-read",
+              "path": "root:customer:ent:$action-read",
+              "permitCode": "root:customer:ent:$action-read",
+              "contextId": "$action-read"
+            }
+          ]
+        },
+        {
+          "topic":"个人客户",
+          "direction":"right",
+          "expanded":false,
+          "type": "menu",
+          "id": "root:customer:ind",
+          "path": "root:customer:ind",
+          "permitCode": "root:customer:ind",
+          "contextId": "ind",
+          "fullName": "个人客户",
+          "enabled": "N",
+          "icon": "",
+          "url": "/Customer/Indivpathual",
+          "param": "",
+          "children": []
+        }
+      ]
+    },
+      {
+        "topic":"项目管理",
+        "direction":"right",
+        "expanded":false,
+        "type": "menu",
+        "id": "root:plan",
+        "path": "root:plan",
+        "permitCode": "root:plan",
+        "contextId": "plan",
+        "fullName": "",
+        "enabled": "N",
+        "icon": "fa-home",
+        "url": "home",
+        "param": "",
+        "children": []
+      },
+      {
+        "topic":"合同管理",
+        "direction":"right",
+        "expanded":false,
+        "type": "menu",
+        "id": "root:contract",
+        "path": "root:contract",
+        "permitCode": "root:contract",
+        "contextId": "contract",
+        "fullName": "",
+        "enabled": "Y",
+        "icon": "fa-home",
+        "url": "home",
+        "param": "",
+        "children": []
+      },
+      {
+        "topic":"业务配置",
+        "direction":"right",
+        "expanded":false,
+        "type": "menu",
+        "id": "root:configuration",
+        "path": "root:configuration",
+        "permitCode": "root:configuration",
+        "contextId": "configuration",
+        "fullName": "",
+        "enabled": "Y",
+        "icon": "fa-home",
+        "url": "home",
+        "param": "",
+        "children": []
+      },
+      {
+        "topic":"系统管理",
+        "direction":"right",
+        "expanded":false,
+        "type": "menu",
+        "id": "root:system",
+        "path": "root:system",
+        "permitCode": "root:system",
+        "contextId": "system",
+        "fullName": "",
+        "enabled": "Y",
+        "icon": "fa-home",
+        "url": "",
+        "param": "",
+        "children": []
+      },
+      {
+        "topic":"参考案例",
+        "direction":"right",
+        "expanded":false,
+        "type": "menu",
+        "id": "root:showcase",
+        "path": "root:showcase",
+        "permitCode": "root:showcase",
+        "contextId": "showcase",
+        "fullName": "",
+        "enabled": "Y",
+        "icon": "fa-home",
+        "url": "home",
+        "param": "",
+        "children": []
+      }
+  ]}
+}

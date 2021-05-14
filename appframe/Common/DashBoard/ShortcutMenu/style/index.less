@@ -1,0 +1,107 @@
+@import "../../../../../src/style/index";
+
+.@{prefix}-shortcutmenu{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background: #FFFFFF;
+  &-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 6px;
+    font-size: @tableHeadFontSize;
+    font-weight: 900;
+    //background-color: #f9f9f9;
+    i{
+      font-size: @tableHeadFontSize + 1px;
+    }
+    i:hover{
+      color: #00A0E9;
+    }
+  }
+  &-menus{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    &-itemv2{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:auto;
+      height: 25px;
+      margin: 8px;
+      padding: 2px 12px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      cursor: pointer;
+      span{
+        text-align: center;
+      }
+      &-deletefalse{
+        position: absolute;
+        visibility: hidden;
+      }
+      &-deletetrue{
+        position: absolute;
+        width: calc(~"100% + 1px");
+        height: calc(~"100% + 1px");
+        border-radius: 3px;
+        //border: 1px solid rgba(0,0,0,0.2);
+        cursor: default;
+        background: rgba(205,205,205,0.5);
+        i{
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          top: -6px;
+          right: -6px;
+          font-size: 14px;
+          border-radius: 9px;
+          color: rgba(0,0,0,0.4);
+          background: radial-gradient(circle at 100px 100px, #999999, #ffffff);
+          //box-shadow: 0 0 10px #707070;
+        }
+        &:hover{
+          color: rgba(0, 0, 0, 0.65);
+        }
+      }
+    }
+    &-itemfalse:hover{
+      border-color: #00A0E9;
+      color: #00A0E9;
+    }
+    &-itemv2false:hover{
+      border-color: #00A0E9;
+      color: #00A0E9;
+    }
+    &-plustrue{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:73px;
+      height:73px;
+      margin: 5px;
+      padding: 2px;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 3px;
+      //box-shadow: 0 0 1px #707070;
+      i{font-size: 30px}
+      &:hover{
+        border-color: #00A0E9;
+        color: #00A0E9;
+      }
+    }
+    &-plusfalse{
+      visibility: hidden;
+      i{width: 0}
+    }
+  }
+}

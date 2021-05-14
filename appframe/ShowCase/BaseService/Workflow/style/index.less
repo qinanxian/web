@@ -1,0 +1,169 @@
+.workflow-container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &-content{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    &-active{
+      animation: spreadContent 400ms forwards;
+    }
+    &-inactive{
+      animation: unSpreadContent 400ms forwards;
+    }
+    &-spread{
+      width: 100%;
+    }
+    &-header{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-shadow: 0 3px 2px #e8e5e5;
+      &-title{
+        padding-top: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      &-info{
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #BDBCBC;
+        &>span{
+          margin-right: 25px;
+        }
+      }
+      &-tabs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 25px;
+        margin-top: 4px;
+        border-top: 1px solid #efecec;
+        &-links{
+          display: inline-block;
+          margin-right: 10px;
+          &-item{
+            margin-right: 5px;
+            user-select: none;
+            color: #40a9ff;
+            cursor: pointer;
+            text-decoration: underline
+          }
+        }
+        &-btns{
+          display: inline-block;
+          margin-left:10px;
+        }
+      }
+    }
+    &-body{
+      width: 100%;
+      height: 100%;
+      padding-left: 10px;
+      overflow: auto;
+    }
+    &-save{
+      position: absolute;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      right: 20px;
+      top: 517px;
+      bottom: 25px;
+      font-size: 18px;
+      border-radius: 100%;
+      box-shadow: 0 0 2px 2px #e8e5e5;
+      cursor: pointer;
+      background: #80d480;
+      &-icon{
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        color: #ffffff;
+      }
+    }
+    &-save:active{
+      box-shadow: 0 0 2px 0 #e8e5e5;
+    }
+  }
+  &-quickbox{
+    width: 30%;
+    height: 100%;
+    border-left: 1px solid #e2dfdf;
+    background: #f7f7f7;
+    &-active{
+      animation: foldBox 400ms forwards;
+    }
+    &-inactive{
+      animation: unFoldBox 400ms forwards;
+    }
+    &-fold{
+      width: 0;
+    }
+    &-rightIcon{
+      padding-left: 10px;
+      padding-top: 12px;
+    }
+  }
+  &-leftIconshow{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    visibility: hidden;
+    animation: showIcon 420ms forwards;
+  }
+  &-leftIconhidden{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    visibility: hidden;
+  }
+}
+@keyframes showIcon {
+  0% {
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes spreadContent {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes unSpreadContent {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes foldBox {
+  0% {
+    width: 30%;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes unFoldBox {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}

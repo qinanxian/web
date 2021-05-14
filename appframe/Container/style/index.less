@@ -1,0 +1,104 @@
+@import "../../../src/style/index";
+
+.@{prefix}-not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    width: 381px;
+    height: 320px;
+    background: url("notfound.png");
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    &-header {
+      text-align: center;
+      color: #000;
+    }
+    &-back {
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      color: #B7D0E4;
+    }
+  }
+}
+.@{prefix}-error-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    width: 204px;
+    height: 204px;
+    background: url("error.png") no-repeat;
+  }
+  &-content {
+    color: #B8B7BC;
+    &-message {
+      display: flex;
+      flex-direction: row;
+      span {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      ul li {
+        font-weight: bold;
+      }
+    }
+    &-opt {
+      margin-top: 20px;
+      margin-left: 80px;
+      span {
+        user-select: none;
+        border: solid #E3E3E3 1px;
+        padding: 5px 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      span + span {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.ant-confirm-warning .ant-confirm-body > .anticon, .ant-confirm-confirm .ant-confirm-body > .anticon:before{
+  color: #FF0000;
+}
+
+.@{prefix}-container-other {
+  //overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.@{prefix}-container-other-nav-tree {
+  display: flex;
+  flex-direction: row;
+}
+
+.@{prefix}-container-display {
+  display: flex;
+  flex-direction: row;
+}
+.compose-containerv3{
+  border-radius: 5px;
+  overflow: auto;
+}
+.compose-containerv2{
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+.compose-container{
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+.tree-tab-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+}

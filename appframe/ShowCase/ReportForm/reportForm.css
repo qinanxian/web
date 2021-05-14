@@ -1,0 +1,9 @@
+#search-area{
+    display: flex;
+}
+#search-input{
+    width: 200px;
+}
+#rep-search-btn{
+    margin-left: 20px;
+}

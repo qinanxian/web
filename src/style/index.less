@@ -1,0 +1,132 @@
+@prefix: ro;
+@themeColor-one:#001529;
+@themeColor-two:#5bc24c;
+@themeColor-three:#008080;
+@themeColor-four:#8362d6;
+@themeColor-five:#3078d7;
+@themeColor-six:#e63f24;
+@themeColor-seven:#f5b025;
+@themeColor-eight:#30a487;
+@themeColor-nine:#ff8712;
+@themeColor-default:#1890ff;
+@font-size-default:14px;
+@font-size-small:12px;
+@font-size-large:@font-size-default + 2px;
+@tableCellPadding:5px;
+@tableHeadFontSize:15px;
+@font-size-text:14px;
+@menuHeight:35px;
+@formItemBottom:0;
+@inputHeightBase:32px;
+@legendBottom:5px;
+
+.@{prefix}-under-line-true{
+  position: relative;
+  &:after{
+    position: absolute;
+    display: block;
+    width: 100%;
+    content: '';
+    top: 80%;
+    height: 1px;
+    background: #dcdcdc;
+  }
+}
+.ant-collapse-content > .ant-collapse-content-box {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.ant-collapse-header {
+  line-height: 10px !important;
+  i {
+    line-height: 35px !important;
+  }
+}
+.ant-radio-wrapper {
+  margin-right: 0;
+}
+.ant-modal-close-x {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.ant-modal-content {
+  min-width: 590px;
+}
+.ant-spin-nested-loading {
+  height: inherit;
+}
+.ant-spin-container {
+  overflow: unset;
+  height: inherit;
+}
+.ant-form-item-label {
+  min-width: fit-content;
+  width: 100px;
+  padding: 0 5px 0 0;
+}
+.ant-form-item-label label:after {
+  display: none;
+}
+.ant-tabs-bar {
+  margin: 0 0 5px 0;
+}
+.ant-calendar-picker-icon{
+  right: 12px;
+}
+  .ant-table {
+  margin: 0 5px;
+}
+//.ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th, .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th, .ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td, .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td{
+//  padding: @tableCellPadding !important;
+//}
+td{
+  padding: @tableCellPadding !important;
+}
+form .ant-select:only-child, form .ant-cascader-picker:only-child{
+  top: 0;
+}
+.ant-table-thead > tr {
+  height:35px;
+}
+.ant-table-thead > tr > th {
+  font-weight: 700;
+  font-size: @tableHeadFontSize;
+  color: #555;
+}
+.ant-table-small > .ant-table-content > .ant-table-header > table, .ant-table-small > .ant-table-content > .ant-table-body > table, .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table, .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table, .ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-header > table, .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-header > table, .ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-body-outer > .ant-table-body-inner > table, .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table{
+  padding: 0;
+}
+.ant-btn > .anticon + span, .ant-btn > span + .anticon{
+  margin-left: 2px;
+}
+//button{
+//  border-radius: 16px !important;
+//  padding: 0 12px !important;
+//}
+.ant-tabs-bar{
+  background: #ffffff !important;
+}
+.ant-collapse-content{
+  overflow: visible !important;
+}
+#app {
+  overflow: hidden;
+}
+html body {
+  overflow: hidden;
+}
+
+.ant-descriptions-bordered .ant-descriptions-item-content, .ant-descriptions-bordered .ant-descriptions-item-label {
+  padding: 2.5px 10px;
+}
+.ant-descriptions-row > th {
+  width: 100px;
+}
+.ant-descriptions-row > td {
+  padding: 0;
+}
+
+.ant-tabs-tabpane-inactive {
+  height: 0 !important;
+}

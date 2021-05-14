@@ -1,0 +1,106 @@
+.batch-pannel-left,.batch-pannel-right{
+    margin-top: 10px;
+    width: 50%;
+    display: inline-block;
+}
+.batchJobConsole-right{
+    border: 1px solid #E0E0E0;
+    margin-left: 10px;
+    height: 460px;
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 48%;
+}
+
+.batchJobConsole .search-header .ro-quick-container-box{
+    display: inline-block;
+    float: right;
+}
+.batch-table,.batchJobConsole .search-header{
+    width: 96%;
+    margin-left:30px; 
+}
+.batch-table .batch-job-timer{
+    border: 1px solid #E0E0E0;
+    width: 100%;
+    margin-top: 10px;
+    border-collapse:separate; 
+}
+
+.batch-table ul li{
+        border: 1px solid #E0E0E0;
+        list-style: none;
+        margin-top: 10px; 
+        /* height: 120px; */
+        /* position: relative; */
+        padding-bottom:10px; 
+}
+.batch-table ul li > div{
+    /* float: left; */
+    display: inline-block;
+}
+div.time-overdue-calc,div.time-features{
+    margin-left: 20px;
+    width: 18%;
+    height: 100%;
+}
+div.time-container{
+    width: 56%;
+    height: 100%;
+}
+div.time-overdue-calc,div.time-run-status{
+    margin-top: 10px;
+    padding-top: 4px;
+}
+
+div.time-containerId{
+    width: 52%;
+    margin-top: 40px;
+}
+.time-features Button {
+    margin-top: 12px;
+}
+.time-latest-history{
+    height: 40%;
+    margin-top: 6px;
+}
+.time-latest-history span{
+    display: inline-block;
+    border-right: 1px solid #E0E0E0;
+    width: 32%;
+    text-align: center;
+}
+
+.time-latest-history span.time-latest-status {
+    border: none;
+}
+div.time-features{
+    border-left: 1px solid #E0E0E0;
+    padding-left: 30px;
+}
+
+.time-containerId-text,.time-icon-edit{
+    display: inline-block;
+}
+
+.time-containerId-text{
+    background-color: #989898;
+    padding: 0 10px;
+    color:#fff;
+    margin-left:20px; 
+}
+
+.time-icon-edit{
+    margin-left: 10px;
+}
+.clearfix:after{
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+.time-features-btns{
+    display: flex;
+}

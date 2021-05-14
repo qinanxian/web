@@ -1,0 +1,37 @@
+@import "../../../style/index";
+
+.@{prefix}-develop-console {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  &-left {
+    min-width: 200px;
+    max-width: 250px;
+    ul {
+      padding-left: 15px;
+    }
+    li {
+      list-style: none;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  &-right {
+    min-width: 200px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    &-border {
+      border: 1px solid #CCCCCC;
+      border-radius: 5px;
+    }
+    &-bash {
+      min-height: 250px;
+      overflow-y: auto;
+      margin: 5px;
+      background: #000000;
+      color: #F92672;
+    }
+  }
+}

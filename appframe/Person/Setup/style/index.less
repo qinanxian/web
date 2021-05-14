@@ -1,0 +1,51 @@
+.setup-container{
+  display: flex;
+  justify-content: flex-start;
+  width: calc(~"100% - 18px");
+  height: 100%;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 50px;
+  &-append{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 33%;
+    height: 200px;
+    &-mode{
+      display: flex;
+      align-items: center;
+      & > span {
+        min-width: 63px;
+      }
+      & > button {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-theme{
+      display: flex;
+      & > span {
+        min-width: 63px;
+      }
+      &-select{
+        display: flex;
+        flex-direction: column;
+        &-color{
+          width:20px;
+          height:20px;
+          border-radius: 100%;
+          background: #30a487;
+        }
+        &-progress{
+          width: 160px;
+          height: 12px;
+          margin-top: 10px;
+          border-radius: 8px;
+          cursor: pointer;
+          background: linear-gradient(to left, rgb(0,0,0) , rgb(255,255,255));
+        }
+      }
+    }
+  }
+}

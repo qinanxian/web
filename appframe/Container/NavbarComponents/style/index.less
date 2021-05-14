@@ -1,0 +1,40 @@
+@import "../../../../src/style/index";
+.@{prefix}-navbar-logo {
+  //width: 250px;
+  display: flex;
+  align-items: baseline;
+  margin-right: 10px;
+  i{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
+  &-text{
+    margin-left: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #FFFFFF;
+  }
+}
+.@{prefix}-tabPane1-register {
+  color: #5a5c5e;
+  &-item {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &-name {
+      display: inline-block !important;
+      width: 40%;
+      text-align: right;
+      padding-right: 10px;
+    }
+    &-value {
+      display: inline-block !important;
+      flex-grow: 1;
+      width: 60%;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}

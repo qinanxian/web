@@ -1,0 +1,11 @@
+#by-id{
+    font-weight:bold;
+    color:#0000FF;
+    font-size:16px;
+}
+.by-class{
+    font-weight:bold;
+    color:#FF0000;
+    font-size:14px;
+    text-decoration:underline;
+}

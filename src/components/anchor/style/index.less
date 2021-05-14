@@ -1,0 +1,24 @@
+@import "../../../style/index";
+
+.@{prefix}-anchor {
+  display: flex;
+  &-line {
+    width: 2px;
+    background: #E8E8E8;
+    position: relative;
+    &-ball {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 8px;
+      border: 2px solid #1890ff;
+      background-color: #fff;
+      left: -3px;
+      transition: top 0.3s;
+      top: 8px;
+    }
+  }
+  &-links {
+    margin-left: 5px;
+  }
+}

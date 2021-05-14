@@ -1,0 +1,388 @@
+.areaworkflow-container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &-content{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    &-active{
+      animation: spreadContent 300ms forwards;
+    }
+    &-inactive{
+      animation: unSpreadContent 300ms forwards;
+    }
+    &-spread{
+      width: 100%;
+    }
+    &-header{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 10px 0 10px;
+      border-bottom: 1px solid #dedddd;
+      box-shadow: 0 3px 2px #e8e5e5;
+      &-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        &-title{
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 900;
+        }
+        &-info{
+          display: inline-block;
+          color: #BDBCBC;
+          &>span{
+            margin-right: 14px;
+          }
+        }
+      }
+      &-bottomtop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 14px;
+        margin-top: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-top: 1px solid #e2dfdf;
+        &-btns{
+          &-item{
+            display: inline-block;
+            margin-right: 7px;
+          }
+        }
+        &-links{
+          display: flex;
+          align-items: center;
+          height: 25px;
+          &-item{
+            margin-right: 9px;
+            user-select: none;
+            color: #40a9ff;
+            cursor: pointer;
+            text-decoration: underline
+          }
+        }
+      }
+      &-bottombottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 14px;
+        margin-top: 10px;
+        border-top: 1px solid #e2dfdf;
+        &-btns{
+          &-item{
+            display: inline-block;
+            margin-right: 7px;
+          }
+        }
+        &-links{
+          display: flex;
+          align-items: center;
+          height: 25px;
+          &-item{
+            margin-right: 9px;
+            user-select: none;
+            color: #40a9ff;
+            cursor: pointer;
+            text-decoration: underline
+          }
+        }
+      }
+    }
+    &-body{
+      width: 100%;
+      height: calc(~"100% - 82px");
+      padding: 10px 10px 0 10px;
+      overflow: auto;
+    }
+    &-savebtn{
+      position: absolute;
+      display: inline-flex;
+      flex-direction: column;
+      right: 20px;
+      bottom: 25px;
+      z-index: 999;
+      &-done{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        margin-bottom: 3px;
+        font-size: 18px;
+        border-radius: 100%;
+        box-shadow: 0 0 2px 2px #e8e5e5;
+        cursor: pointer;
+        background: #80d480;
+        &-icon{
+          margin-right: 1px;
+          color: #ffffff;
+        }
+      }
+      &-done:active{
+        box-shadow: 0 0 2px 0 #e8e5e5;
+      }
+    }
+  }
+  &-quickbox{
+    width: 30%;
+    height: 100%;
+    padding: 0 10px;
+    border-left: 1px solid #e2dfdf;
+    overflow: auto;
+    background: #f6f9f9;
+    &-active{
+      animation: foldBox 300ms forwards;
+    }
+    &-inactive{
+      animation: unFoldBox 300ms forwards;
+    }
+    &-fold{
+      width: 0;
+      padding: 0;
+    }
+    &-rightIconshow{
+      padding-top: 12px;
+      animation: hiddenRightBtn 250ms forwards;
+    }
+    &-rightIconhidden{
+      padding-top: 12px;
+    }
+    &-btncta{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      padding: 4px;
+      border: 1px solid #e2dfdf;
+      background: #ffffff;
+      &-item{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 90px;
+        height: 70px;
+        margin: 3px;
+        cursor: pointer;
+        &-icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 35%;
+          width: 100%;
+          i{
+            font-size: 22px;
+          }
+        }
+        &-text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 25%;
+          width: 100%;
+        }
+      }
+      &-item:hover{
+        box-shadow: 0 0 1px 1px #e2dfdf;
+        color: #40a9ff;
+        border-radius: 4px;
+      }
+      &-fold{
+        display: none;
+      }
+      &-active{
+        display: none;
+      }
+      &-inactive{
+
+      }
+    }
+    &-fieldset{
+      margin-top: 20px;
+      padding: 4px;
+      &-fold{
+        display: none;
+      }
+      &-active{
+        display: none;
+      }
+      &-inactive{
+
+      }
+      &-collapse{
+        position: relative;
+        margin-top: 20px;
+        border: 1px solid #e2dfdf;
+        background: #ffffff;
+        &-text{
+          position: absolute;
+          width: 100%;
+          top: -20px;
+          color: #40a9ff;
+          &-title{
+            //display: inline-block;
+            width: 37px;
+            height: 23px;
+            cursor: pointer;
+            user-select: none;
+            &-list{
+              position: absolute;
+              top: 20px;
+              display: flex;
+              flex-direction: column;
+              min-width: 111px;
+              padding: 8px;
+              box-shadow: 0 0 2px 1px #ddd;
+              border-radius: 4px;
+              cursor: pointer;
+              color: rgba(0,0,0,.65);
+              background: #f1f1f1;
+              z-index: 666;
+              & > span:hover{
+                color: #40a9ff;
+              }
+            }
+            &-listinit{
+              display: none;
+            }
+            &-listrun{
+              animation: showCommon 400ms forwards;
+            }
+            &-liststop{
+              display: none;
+              //animation: hiddenCommon 400ms forwards;
+            }
+          }
+        }
+      }
+    }
+    &-submit{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      &-fold{
+        display: none;
+      }
+      &-active{
+        display: none;
+      }
+      &-inactive{
+
+      }
+    }
+  }
+  &-leftIconshow{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    visibility: hidden;
+    animation: showIcon 320ms forwards;
+  }
+  &-leftIconhidden{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    visibility: hidden;
+  }
+}
+.ant-collapse > .ant-collapse-item {
+  border-bottom: 0;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow{
+  //left: calc(~'100% - 20px');
+  &:before{
+    line-height: 35px;
+  }
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+  padding: 12px 0 12px 40px;
+  border-left:#1890ff solid 4px;
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+  font-weight: 600;
+  font-size: 15px;
+  //color: #288ce2;
+  color: #7D7E7F;
+}
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header{
+  border-radius: 0;
+}
+.ant-collapse-content > .ant-collapse-content-box{
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+@keyframes showCommon {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes hiddenCommon {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+    //display: none;
+  }
+}
+@keyframes hiddenRightBtn {
+  to{
+    opacity: 0;
+  }
+}
+@keyframes showIcon {
+  0% {
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes spreadContent {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes unSpreadContent {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes foldBox {
+  0% {
+    width: 30%;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes unFoldBox {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}

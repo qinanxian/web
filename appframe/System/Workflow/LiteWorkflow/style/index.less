@@ -1,0 +1,57 @@
+.liteApply-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 45%;
+  min-width: 530px;
+  &-button{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    min-width: 317px;
+    align-items: center;
+    span{
+      cursor: pointer;
+      border-radius: 100%;
+    }
+    span>i{
+      margin: auto auto;
+      font-size: 27px;
+    }
+    span:hover{
+      color: #00A0E9;
+    }
+    span:active{
+      color: #d4d4d4;
+    }
+  }
+  &-delete {
+    color: #FF0000;
+    cursor: pointer;
+    i{
+      font-size: 27px;
+      border-radius: 15px;
+      border: 2px solid;
+    }
+    &:active{
+      i{
+        color: #CCCCCC;
+      }
+    }
+  }
+  &-submit{
+    align-self: flex-end;
+  }
+}
+.liteApprove-container{
+  min-width: 530px;
+  &-text{
+    margin-left: 32px;
+    font-size: 20px;
+    color: red;
+  }
+  &-option{
+    margin: 30px auto auto;
+    width: 45%;
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "roots": [
+    {
+      "type": "start",
+      "id": "/",
+      "shortName": "金融风险平台",
+      "fullName": "金融风险综合管理平台",
+      "icon": "",
+      "label": "金融风险平台",
+      "children": [
+        {
+          "type": "menu",
+          "id": "/home",
+          "shortName": "首页",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "首页",
+          "children": []
+        },
+        {
+          "type": "menu",
+          "id": "/customer",
+          "shortName": "客户管理",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-customer",
+          "url": "",
+          "param": "",
+          "label": "客户管理",
+          "children": [
+            {
+              "type": "menu",
+              "id": "/customer/ent",
+              "shortName": "法人客户",
+              "fullName": "",
+              "enabled": "Y",
+              "icon": "",
+              "url": "/Customer/Enterprise",
+              "param": "",
+              "label": "法人客户",
+              "children": [
+                {
+                  "type": "datascope",
+                  "id": "/customer/ent/$datascope/all",
+                  "shortName": "所有数据",
+                  "label": "所有数据"
+                },
+                {
+                  "type": "datascope",
+                  "id": "/customer/ent/$datascope/orgself",
+                  "shortName": "本机构数据",
+                  "label": "本机构数据"
+                },
+                {
+                  "type": "datascope",
+                  "id": "/customer/ent/$datascope/subordinate",
+                  "shortName": "本机构及下属机构",
+                  "label": "本机构及下属机构"
+                },
+                {
+                  "type": "datascope",
+                  "id": "/customer/ent/$datascope/self",
+                  "shortName": "本人数据",
+                  "label": "本人数据"
+                },
+                {
+                  "type": "action",
+                  "id": "/customer/ent/$action/write",
+                  "shortName": "写",
+                  "label": "写"
+                },
+                {
+                  "type": "action",
+                  "id": "/customer/ent/$action/read",
+                  "shortName": "读",
+                  "label": "读"
+                }
+              ]
+            },
+            {
+              "type": "menu",
+              "id": "/customer/ind",
+              "shortName": "个人客户",
+              "fullName": "",
+              "enabled": "Y",
+              "icon": "",
+              "url": "/Customer/Individual",
+              "param": "",
+              "label": "个人客户",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "menu",
+          "id": "/plan",
+          "shortName": "项目管理",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "项目管理",
+          "children": []
+        },
+        {
+          "type": "menu",
+          "id": "/contract",
+          "shortName": "合同管理",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "合同管理",
+          "children": []
+        },
+        {
+          "type": "menu",
+          "id": "/configuration",
+          "shortName": "业务配置",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "业务配置",
+          "children": []
+        },
+        {
+          "type": "menu",
+          "id": "/system",
+          "shortName": "系统管理",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "系统管理",
+          "children": []
+        },
+        {
+          "type": "menu",
+          "id": "/showcase",
+          "shortName": "参考案例",
+          "fullName": "",
+          "enabled": "Y",
+          "icon": "fa-home",
+          "url": "home",
+          "param": "",
+          "label": "参考案例",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

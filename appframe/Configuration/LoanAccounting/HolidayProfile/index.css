@@ -1,0 +1,50 @@
+.workday{
+
+}
+.legal {
+    color:#191970;
+    background-color: #DCDCDC;
+}
+.weekend{
+    color:#191970;
+    background-color: #C6E2FF;
+}
+.statutory{
+    color:#A52A2A;
+    background-color: #FF8C69;
+}
+.cell-content{
+    font-size: 0.6em;
+    display: block;
+    text-align: center;
+}
+.ant-fullcalendar-value{
+    text-align: center;
+}
+.ant-fullcalendar-content{
+    position: inherit;
+}
+.holiday-table{
+    border-collapse:collapse;
+}
+.holiday-table th,
+.holiday-table td{
+    border:1px solid #DCDCDC;
+    padding:3px;
+}
+.holiday-profile-tab {
+    position: relative;
+}
+.holiday-profile-tab-name {
+    display: inline-block;
+}
+.holiday-profile-tab-count {
+    position: absolute;
+    font-size: 0.5em;
+    color: #FFFFFF;
+    background: green;
+    border-radius: 7px;
+    margin-left: 5px;
+    padding: 1px;
+    margin-top: -4px;
+}

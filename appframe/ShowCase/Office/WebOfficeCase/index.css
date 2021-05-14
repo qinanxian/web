@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start ;
+  }
+
+  .flex-container .flex-item{
+    padding:5px;
+  }
+
+  .flex-container .flex-item ul{
+    padding:10px;
+  }

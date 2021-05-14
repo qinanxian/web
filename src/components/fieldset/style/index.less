@@ -1,0 +1,105 @@
+@import "../../../style/index";
+
+.@{prefix}-field-set {
+  margin-top: 10px;
+  //overflow: hidden;
+  border: 1px solid #DFE0E2 ;
+  padding-left: 10px;
+  padding-right: 10px;
+  &-expanded {
+    height: auto;
+    border: 1px solid #DFE0E2 ;
+    background: #FFFFFF;
+  }
+  &-unexpanded {
+    height: 60px;
+    border: 1px solid #DFE0E2;
+  }
+  &-unexpandedv2 {
+    height: 60px;
+    border: 1px solid #c7c7c7;
+  }
+  legend {
+    width: auto;
+    margin-left: 10px;
+  }
+  &-legend {
+    margin-top: 5px;
+    border: #DFE0E2 solid 1px;
+    cursor: pointer;
+    color: #9fa1a3;
+    font-size: @tableHeadFontSize;
+    display: flex;
+    padding: 2px 5px;
+    background: #FFFFFF;
+    &-icon {
+      line-height: 20px;
+    }
+    &-content {
+      margin-left: 5px;
+    }
+  }
+  &-header {
+    line-height: 35px;
+    height: 35px;
+    background: #9fa1a3;
+    span{
+      margin-left: 10px;
+    }
+  }
+}
+.ant-form legend{
+  margin-bottom: @legendBottom;
+}
+.ant-legacy-form legend{
+  margin-bottom: @legendBottom;
+}
+legend{
+  margin-bottom: 5px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow{
+  //left: calc(~'100% - 20px');
+  &:before{
+    line-height: 35px;
+  }
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+  padding: 12px 0 12px 40px;
+  border-left:#1890ff solid 2px;
+  font-weight: bold;
+  font-size: @tableHeadFontSize !important;
+  color: #288ce2;
+}
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header{
+  border-radius: 0;
+}
+
+.@{prefix}-field-set-lite {
+  &-container {
+    padding: 8px;
+  }
+  &-header {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: @tableHeadFontSize;
+    &-icon i{
+      transition: all 0.3s;
+      transform:rotate(0deg);
+      margin-right: 5px;
+    }
+    &-icon-expand i{
+      transform:rotate(90deg);
+    }
+    &-title {
+    }
+  }
+  &-content {
+    padding-top: 5px;
+  }
+  &-border {
+    margin: 10px 5px;
+    height: 1px;
+    width: 100%;
+    background-color: #e8e8e8;
+  }
+}

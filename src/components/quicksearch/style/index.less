@@ -1,0 +1,63 @@
+@import "../../../style/index";
+
+.@{prefix}-quick {
+  height: 31px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  &-container{
+    float: right;
+    display: flex;
+    margin-right: 10px;
+    width: 100%;
+    min-width: 350px;
+    height: 31px;
+    justify-content: flex-end;
+    &-box {
+      width: 30%;
+      min-width: 260px;
+      .ant-input-affix-wrapper input {
+        height: auto !important;
+      }
+      &-icon {
+        &:hover {
+          color: #288CE2;
+          cursor: pointer;
+        }
+      }
+    }
+    &-boxv2 input{
+      //border-radius: 16px;
+    }
+    &-adText {
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      width: 88px;
+      height: 30px;
+      margin-left: 18px;
+      cursor: pointer;
+      user-select: none;
+      &:hover {
+        animation: hover 800ms ease;
+      }
+    }
+    &-adText {
+      width: 95px;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 14px;
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
+      & > span {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+@keyframes hover {
+  to{
+    color: #288CE2;
+    border-color: #288CE2;
+  }
+}
