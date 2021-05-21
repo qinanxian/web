@@ -2,8 +2,6 @@ import React from 'react'
 
 import {DataTable, Message, Notify, openModal, Modal, rest} from '../../../src/components';
 import LabelInfo from './LabelInfo';
-import BusinessTypeInfo from "../../CodeToDo/AccessableBusinessType/BusinessTypeInfo";
-import AddPreApprovalInfo from "../PreApproval/AddPreApprovalInfo";
 export default class LableList extends React.Component {
 
   constructor(props) {
