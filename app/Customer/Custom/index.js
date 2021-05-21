@@ -2,8 +2,10 @@ import React from "react";
 
 import CustomTree from "./CustomTree";
 import CustomInfo from "./CustomInfo";
+import CustomInfoLabelInfo from "./CustomInfoLabelInfo";
 
 import { DataTable, Message, openModal, Modal,Download,Icon,rest} from '../../../src/components';
+import BusinessTypeInfo from "../../CodeToDo/AccessableBusinessType/BusinessTypeInfo";
 
 export default class Custom extends React.Component {
     static CustomTree = CustomTree;
@@ -20,8 +22,34 @@ export default class Custom extends React.Component {
                 name: '导出EXCEL',
                 type: 'default',
                 onClick: () => this.exportExcel(true)
-            }
+            },
+            {
+                name: '客户标签',
+                selectBind: true,
+                onClick: this.CustomLabel
+            },
         ]);
+    };
+
+    CustomLabel = (voList) => {
+        const id = this.voList.getSelectedRows()[0].id;
+        this.openCustomLabelModal(id, "编辑客户标签");
+    }
+
+    openCustomLabelModal = (id, title) => {
+        openModal(<CustomInfoLabelInfo readonly={this.props.readonly}/>, {
+            title: title,
+            id: id,
+            defaultButton: !this.props.readonly,
+            refresh: this.tableRefresh,
+            onOk: (a, b, c) => {
+                a.close();
+                b.LabelInfoadd((err, value) => {
+                });
+            },
+            onCancel: (a, b) => {
+            }
+        });
     };
 
     exportExcel = (isAll) => {
