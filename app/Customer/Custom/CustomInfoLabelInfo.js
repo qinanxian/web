@@ -33,11 +33,9 @@ export default class CustomInfoLabelInfo extends React.Component {
           rest.post('/Label/insterLabel', {orgIdArray: array,id:this.id})
             .then((res) => {
               if (res == 0) {
-                Message.success("跑批数据成功");
+                Message.success("标签添加成功");
                 const {refresh} = this.props;
                 refresh && refresh();
-              } else {
-                Message.success("数据正在跑批中......请稍后再试！！！！！请勿重复点击。");
               }
             })
         },
@@ -53,7 +51,7 @@ export default class CustomInfoLabelInfo extends React.Component {
   onSelectRow=(keys,rows)=>{
     const {arrAys} =this.state;
     this.setState({
-      arrAys: rows.map(item=>item.fullName)
+      arrAys: rows.map(item=>item.id)
     })
 
   }

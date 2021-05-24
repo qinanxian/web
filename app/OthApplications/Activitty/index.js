@@ -25,7 +25,7 @@ export default class ActivityList extends React.Component {
       {
         name: '活动详情',
         selectBind: true,
-        onClick: this.ActivityInfo
+        onClick: this.openActivityInfo
       },
       {
         name: '发起活动',
@@ -97,10 +97,7 @@ export default class ActivityList extends React.Component {
           .then((res) => {
             if (res == 0) {
               Message.success("活动撤销成功");
-              const {refresh} = this.props;
-              refresh && refresh();
-            } else {
-              Message.success("数据正在跑批中......请稍后再试！！！！！请勿重复点击。");
+              this.tableRefresh();
             }
           })
       },
@@ -118,12 +115,13 @@ export default class ActivityList extends React.Component {
         onOk: () => {
           rest.post('/Activity/activityStart', {targetCustomer: targetCustomer,id: id})
             .then((res) => {
-              if (res == 0) {
+              if (res === 0) {
                 Message.success("消息发送成功");
-                const {refresh} = this.props;
-                refresh && refresh();
-              } else if(res==1) {
+                this.tableRefresh();
+              } else if(res===1) {
                 Message.error("活动已失效，不可发起！");
+              }else if(res===2) {
+                Message.error("活动已发起，不可再次发起！！");
               }
             })
         },
@@ -152,28 +150,31 @@ export default class ActivityList extends React.Component {
     });
   };
 
-  // LableInfo = (voList) => {
-  //   const id = this.voList.getSelectedRows()[0].id;
-  //   this.openLableInfoModal(id, "标签管理详情");
-  // }
 
-  // openLableInfoModal = (id, title) => {
-  //   openModal(<LabelInfo readonly={this.props.readonly}/>, {
-  //     title: title,
-  //     id: id,
-  //     defaultButton: !this.props.readonly,
-  //     refresh: this.tableRefresh,
-  //     onOk: (a, b) => {
-  //       a.close();
-  //     },
-  //     onCancel: (a, b) => {
-  //     }
-  //   });
-  // };
+
+  openActivityInfo = (voList) => {
+    const id = this.voList.getSelectedRows()[0].id;
+    this.openActivityInfoModal(id, "营销活动详情");
+  }
+
+  openActivityInfoModal = (id, title) => {
+    openModal(<ActivityInfo readonly={this.props.readonly}/>, {
+      title: title,
+      id: id,
+      defaultButton: !this.props.readonly,
+      refresh: this.tableRefresh,
+      onOk: (a, b) => {
+        a.close();
+      },
+      onCancel: (a, b) => {
+      }
+    });
+  };
 
 
   tableRefresh = () => {
-    this.voList.refresh();
+    const {refresh} = this.props;
+    refresh && refresh();
   };
 
   render() {
